@@ -61,3 +61,673 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+
+
+Started GET "/api/v1/users/1" for ::1 at 2016-06-16 18:01:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+LoadError (Unable to autoload constant Api::V1::UsersController, expected /Users/pulsifer/Development/projects/sparrow/api/app/controllers/api/v1/users_controller.rb to define it):
+  activesupport (4.2.6) lib/active_support/dependencies.rb:495:in `load_missing_constant'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:263:in `const_get'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:263:in `block in constantize'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/pulsifer/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/pulsifer/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/pulsifer/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.4ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (135.1ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (108.8ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (276.4ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2016-06-16 18:01:42 -0400
+
+TypeError (superclass mismatch for class UsersController):
+  app/controllers/api/v1/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.2ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (117.4ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (249.0ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2016-06-16 18:03:44 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 146ms (ActiveRecord: 84.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/api/v1/users_controller.rb:6:in `show'
+
+
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.7ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (85.3ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (191.8ms)
+  [1m[36mUser Load (15.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36m (709.0ms)[0m  [1mDROP DATABASE IF EXISTS "api_development"[0m
+  [1m[35m (828.4ms)[0m  DROP DATABASE IF EXISTS "api_test"
+  [1m[36m (467.8ms)[0m  [1mCREATE DATABASE "api_development" ENCODING = 'unicode'[0m
+  [1m[35m (272.4ms)[0m  CREATE DATABASE "api_test" ENCODING = 'unicode'
+  [1m[36mSQL (9.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (49.6ms)[0m  CREATE TABLE "diagnoses" ("id" serial primary key, "diagnosis" character varying, "user_id" integer) 
+  [1m[36m (14.1ms)[0m  [1mCREATE TABLE "entries" ("id" serial primary key, "value" integer, "diagnosis_id" integer) [0m
+  [1m[35m (16.0ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying) 
+  [1m[36m (6.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (5.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.9ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (3.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211809')
+  [1m[36m (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160616211736')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211752')
+  [1m[36mSQL (2.8ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (16.5ms)[0m  CREATE TABLE "diagnoses" ("id" serial primary key, "diagnosis" character varying, "user_id" integer) 
+  [1m[36m (6.9ms)[0m  [1mCREATE TABLE "entries" ("id" serial primary key, "value" integer, "diagnosis_id" integer) [0m
+  [1m[35m (7.5ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying) 
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (3.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.8ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211809')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160616211736')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211752')
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "users" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Bob"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name") VALUES ($1) RETURNING "id"  [["name", "Linda"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Tina"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name") VALUES ($1) RETURNING "id"  [["name", "Louise"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Gene"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "diagnoses" ("user_id", "diagnosis") VALUES ($1, $2) RETURNING "id"  [["user_id", 2], ["diagnosis", "Fibromyalgia"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "diagnoses" ("user_id", "diagnosis") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["diagnosis", "Back sprain"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "diagnoses" ("user_id", "diagnosis") VALUES ($1, $2) RETURNING "id"  [["user_id", 3], ["diagnosis", "Ulcerative colitis"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "diagnoses" ("user_id", "diagnosis") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 4], ["diagnosis", "Lupus"]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (3.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.8ms)[0m  INSERT INTO "diagnoses" ("user_id", "diagnosis") VALUES ($1, $2) RETURNING "id"  [["user_id", 5], ["diagnosis", "Scapula injury"]]
+  [1m[36m (10.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 1], ["value", 1]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 1], ["value", 2]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 1], ["value", 0]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 1], ["value", 3]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 1], ["value", 2]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 2], ["value", 8]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 2], ["value", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 2], ["value", 4]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 2], ["value", 1]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 2], ["value", 9]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 2], ["value", 7]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 3], ["value", 4]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 3], ["value", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 3], ["value", 5]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 3], ["value", 2]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 3], ["value", 5]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 3], ["value", 7]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 3], ["value", 6]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 4], ["value", 0]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 4], ["value", 0]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 4], ["value", 3]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 4], ["value", 4]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 4], ["value", 5]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 4], ["value", 8]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 4], ["value", 0]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 4], ["value", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 4], ["value", 2]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 5], ["value", 8]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 5], ["value", 6]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 5], ["value", 7]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 5], ["value", 8]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 5], ["value", 9]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 5], ["value", 8]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 5], ["value", 6]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"[0m  [["diagnosis_id", 5], ["value", 7]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value") VALUES ($1, $2) RETURNING "id"  [["diagnosis_id", 5], ["value", 5]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (4.6ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDiagnosis Load (0.8ms)[0m  [1mSELECT "diagnoses".* FROM "diagnoses" WHERE "diagnoses"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mEntry Load (1.0ms)[0m  [1mSELECT "entries".* FROM "entries" INNER JOIN "diagnoses" ON "entries"."diagnosis_id" = "diagnoses"."id" WHERE "diagnoses"."user_id" = $1[0m  [["user_id", 1]]
+
+
+Started GET "/api/v1/users/1" for ::1 at 2016-06-16 18:17:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 5.9ms)
+
+NoMethodError (undefined method `includes' for #<User id: 1, name: "Bob">):
+  app/controllers/api/v1/users_controller.rb:7:in `show'
+
+
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.2ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (108.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (242.5ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2016-06-16 18:18:36 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 56.3ms)
+
+NoMethodError (undefined method `include' for #<User id: 1, name: "Bob">):
+  app/controllers/api/v1/users_controller.rb:6:in `show'
+
+
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (117.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (109.9ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (247.7ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2016-06-16 18:18:53 -0400
+
+SyntaxError (/Users/pulsifer/Development/projects/sparrow/api/app/controllers/api/v1/users_controller.rb:6: syntax error, unexpected ':', expecting keyword_end
+...User.find(params[:id]).include: ['diagnoses', 'entries']
+...                               ^):
+  app/controllers/api/v1/users_controller.rb:6: syntax error, unexpected ':', expecting keyword_end
+
+
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.2ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (89.0ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (234.5ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2016-06-16 18:19:06 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mDiagnosis Load (0.8ms)[0m  [1mSELECT "diagnoses".* FROM "diagnoses" WHERE "diagnoses"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[35mEntry Load (4.4ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."diagnosis_id" = $1  [["diagnosis_id", 2]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (179.97ms)
+Completed 200 OK in 280ms (Views: 198.8ms | ActiveRecord: 51.4ms)
+  [1m[35mEntry Load (29.2ms)[0m  SELECT  "entries".* FROM "entries"  ORDER BY "entries"."id" ASC LIMIT 1
+  [1m[36mEntry Load (0.9ms)[0m  [1mSELECT  "entries".* FROM "entries"  ORDER BY "entries"."id" ASC LIMIT 1[0m
+  [1m[36m (5043.3ms)[0m  [1mDROP DATABASE IF EXISTS "api_development"[0m
+  [1m[35m (185.9ms)[0m  DROP DATABASE IF EXISTS "api_test"
+  [1m[36m (2.5ms)[0m  [1mCREATE DATABASE "api_development" ENCODING = 'unicode'[0m
+  [1m[35m (1010.9ms)[0m  CREATE DATABASE "api_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (38.6ms)[0m  DROP TABLE "diagnoses" CASCADE
+  [1m[36m (26.1ms)[0m  [1mCREATE TABLE "diagnoses" ("id" serial primary key, "diagnosis" character varying, "user_id" integer) [0m
+  [1m[35m (3.1ms)[0m  DROP TABLE "entries" CASCADE
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "entries" ("id" serial primary key, "value" integer, "diagnosis_id" integer) [0m
+  [1m[35m (5.7ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (8.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying) [0m
+  [1m[35m (1.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.6ms)[0m  CREATE TABLE "diagnoses" ("id" serial primary key, "diagnosis" character varying, "user_id" integer) 
+  [1m[36m (9.0ms)[0m  [1mCREATE TABLE "entries" ("id" serial primary key, "value" integer, "diagnosis_id" integer) [0m
+  [1m[35m (7.2ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying) 
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (4.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.9ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (4.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211809')
+  [1m[36m (2.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160616211736')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211752')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (128.5ms)[0m  [1mDROP DATABASE IF EXISTS "api_development"[0m
+  [1m[35m (129.3ms)[0m  DROP DATABASE IF EXISTS "api_test"
+  [1m[36m (410.1ms)[0m  [1mCREATE DATABASE "api_development" ENCODING = 'unicode'[0m
+  [1m[35m (260.6ms)[0m  CREATE DATABASE "api_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (13.7ms)[0m  CREATE TABLE "diagnoses" ("id" serial primary key, "diagnosis" character varying, "user_id" integer) 
+  [1m[36m (9.4ms)[0m  [1mCREATE TABLE "entries" ("id" serial primary key, "value" integer, "diagnosis_id" integer) [0m
+  [1m[35m (11.1ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying) 
+  [1m[36m (13.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (6.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.8ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (5.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211809')
+  [1m[36m (4.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160616211736')[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211752')
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (17.9ms)[0m  CREATE TABLE "diagnoses" ("id" serial primary key, "diagnosis" character varying, "user_id" integer) 
+  [1m[36m (6.4ms)[0m  [1mCREATE TABLE "entries" ("id" serial primary key, "value" integer, "diagnosis_id" integer) [0m
+  [1m[35m (8.2ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying) 
+  [1m[36m (6.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (1.7ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211809')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160616211736')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211752')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTimeToEntries (20160616222321)
+  [1m[35m (1.2ms)[0m  BEGIN
+  [1m[36m (5.9ms)[0m  [1mALTER TABLE "entries" ADD "created_at" timestamp[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160616222321"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (9.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'diagnoses'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (6.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'entries'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (6.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36m (130.4ms)[0m  [1mDROP DATABASE IF EXISTS "api_development"[0m
+  [1m[35m (124.1ms)[0m  DROP DATABASE IF EXISTS "api_test"
+  [1m[36m (359.3ms)[0m  [1mCREATE DATABASE "api_development" ENCODING = 'unicode'[0m
+  [1m[35m (248.8ms)[0m  CREATE DATABASE "api_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (15.0ms)[0m  CREATE TABLE "diagnoses" ("id" serial primary key, "diagnosis" character varying, "user_id" integer) 
+  [1m[36m (7.7ms)[0m  [1mCREATE TABLE "entries" ("id" serial primary key, "value" integer, "diagnosis_id" integer, "created_at" timestamp) [0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying) 
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.7ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616222321')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160616211736')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211752')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160616211809')[0m
+  [1m[35mSQL (0.7ms)[0m  CREATE EXTENSION IF NOT EXISTS "plpgsql"
+  [1m[36m (13.8ms)[0m  [1mCREATE TABLE "diagnoses" ("id" serial primary key, "diagnosis" character varying, "user_id" integer) [0m
+  [1m[35m (5.1ms)[0m  CREATE TABLE "entries" ("id" serial primary key, "value" integer, "diagnosis_id" integer, "created_at" timestamp) 
+  [1m[36m (16.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying) [0m
+  [1m[35m (10.1ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.8ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160616222321')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211736')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160616211752')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160616211809')
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "users" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Bob"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name") VALUES ($1) RETURNING "id"  [["name", "Linda"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Tina"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name") VALUES ($1) RETURNING "id"  [["name", "Louise"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Gene"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "diagnoses" ("user_id", "diagnosis") VALUES ($1, $2) RETURNING "id"  [["user_id", 2], ["diagnosis", "Fibromyalgia"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "diagnoses" ("user_id", "diagnosis") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["diagnosis", "Back sprain"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "diagnoses" ("user_id", "diagnosis") VALUES ($1, $2) RETURNING "id"  [["user_id", 3], ["diagnosis", "Ulcerative colitis"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "diagnoses" ("user_id", "diagnosis") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 4], ["diagnosis", "Lupus"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "diagnoses" ("user_id", "diagnosis") VALUES ($1, $2) RETURNING "id"  [["user_id", 5], ["diagnosis", "Scapula injury"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 1], ["value", 1], ["created_at", "2016-06-16 22:25:58.543075"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 1], ["value", 2], ["created_at", "2016-06-16 22:25:58.548448"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 1], ["value", 0], ["created_at", "2016-06-16 22:25:58.551424"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 1], ["value", 3], ["created_at", "2016-06-16 22:25:58.554854"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 1], ["value", 2], ["created_at", "2016-06-16 22:25:58.558040"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 2], ["value", 8], ["created_at", "2016-06-16 22:25:58.561066"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 2], ["value", 3], ["created_at", "2016-06-16 22:25:58.564076"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 2], ["value", 4], ["created_at", "2016-06-16 22:25:58.567130"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 2], ["value", 1], ["created_at", "2016-06-16 22:25:58.570128"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 2], ["value", 9], ["created_at", "2016-06-16 22:25:58.573084"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 2], ["value", 7], ["created_at", "2016-06-16 22:25:58.575960"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 3], ["value", 4], ["created_at", "2016-06-16 22:25:58.578905"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 3], ["value", 3], ["created_at", "2016-06-16 22:25:58.581750"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 3], ["value", 5], ["created_at", "2016-06-16 22:25:58.584511"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 3], ["value", 2], ["created_at", "2016-06-16 22:25:58.587556"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 3], ["value", 5], ["created_at", "2016-06-16 22:25:58.590744"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 3], ["value", 7], ["created_at", "2016-06-16 22:25:58.593994"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 3], ["value", 6], ["created_at", "2016-06-16 22:25:58.596945"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 4], ["value", 0], ["created_at", "2016-06-16 22:25:58.599821"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 4], ["value", 0], ["created_at", "2016-06-16 22:25:58.603875"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 4], ["value", 3], ["created_at", "2016-06-16 22:25:58.606775"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 4], ["value", 4], ["created_at", "2016-06-16 22:25:58.609723"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 4], ["value", 5], ["created_at", "2016-06-16 22:25:58.612582"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 4], ["value", 8], ["created_at", "2016-06-16 22:25:58.615801"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 4], ["value", 0], ["created_at", "2016-06-16 22:25:58.618650"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 4], ["value", 1], ["created_at", "2016-06-16 22:25:58.621957"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 4], ["value", 2], ["created_at", "2016-06-16 22:25:58.625130"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 5], ["value", 8], ["created_at", "2016-06-16 22:25:58.628257"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 5], ["value", 6], ["created_at", "2016-06-16 22:25:58.631254"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 5], ["value", 7], ["created_at", "2016-06-16 22:25:58.634159"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 5], ["value", 8], ["created_at", "2016-06-16 22:25:58.637406"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 5], ["value", 9], ["created_at", "2016-06-16 22:25:58.641661"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 5], ["value", 8], ["created_at", "2016-06-16 22:25:58.646180"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 5], ["value", 6], ["created_at", "2016-06-16 22:25:58.650685"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["diagnosis_id", 5], ["value", 7], ["created_at", "2016-06-16 22:25:58.656953"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("diagnosis_id", "value", "created_at") VALUES ($1, $2, $3) RETURNING "id"  [["diagnosis_id", 5], ["value", 5], ["created_at", "2016-06-16 22:25:58.660934"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mEntry Load (2.8ms)[0m  [1mSELECT  "entries".* FROM "entries"  ORDER BY "entries"."id" ASC LIMIT 1[0m
+  [1m[36mEntry Load (11.0ms)[0m  [1mSELECT  "entries".* FROM "entries"  ORDER BY "entries"."id" ASC LIMIT 1[0m
+
+
+Started GET "/api/v1/users/1" for ::1 at 2016-06-16 18:37:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (20.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (5.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mDiagnosis Load (0.6ms)[0m  [1mSELECT "diagnoses".* FROM "diagnoses" WHERE "diagnoses"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[35mEntry Load (0.8ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."diagnosis_id" = $1  [["diagnosis_id", 2]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (115.74ms)
+Completed 200 OK in 203ms (Views: 130.2ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2016-06-16 18:38:04 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 6.8ms)
+
+NoMethodError (undefined method `includes' for #<User id: 1, name: "Bob">):
+  app/controllers/api/v1/users_controller.rb:6:in `show'
+
+
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (126.3ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (125.8ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/pulsifer/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (252.3ms)
