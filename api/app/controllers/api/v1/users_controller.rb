@@ -1,7 +1,11 @@
-class UsersController < ApplicationController
+module Api
+  module V1
+    class UsersController < ApplicationController
 
-  def show
-    user = User.find(params[:id])
-    render json: user.includes(:entries).include['diagnoses', 'entries']
+      def show
+        render json: User.find(params[:id]), include: ['diagnoses', 'entries']
+      end
+
+    end
   end
 end
