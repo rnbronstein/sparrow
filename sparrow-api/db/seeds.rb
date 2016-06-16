@@ -1,7 +1,53 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+bob = User.create("Bob")
+linda = User.create("Linda")
+tina = User.create("Tina")
+louise = User.create("Louise")
+gene = User.create("Gene")
+
+fibro = Diagnosis.create(user: linda, diagnosis: "Fibromyalgia")
+back = Diagnosis.create(user: bob, diagnosis: "Back sprain")
+uc = Diagnosis.create(user: tina, diagnosis: "Ulcerative colitis")
+lupus = Diagnosis.create(user: louise, diagnosis: "Lupus")
+scapula = Diagnosis.create(user: gene, diagnosis: "Scapula injury")
+
+
+Entry.create(diagnosis: fibro, value: 1)
+Entry.create(diagnosis: fibro, value: 2)
+Entry.create(diagnosis: fibro, value: 0)
+Entry.create(diagnosis: fibro, value: 3)
+Entry.create(diagnosis: fibro, value: 2)
+
+Entry.create(diagnosis: back, value: 8)
+Entry.create(diagnosis: back, value: 3)
+Entry.create(diagnosis: back, value: 4)
+Entry.create(diagnosis: back, value: 1)
+Entry.create(diagnosis: back, value: 9)
+Entry.create(diagnosis: back, value: 7)
+
+Entry.create(diagnosis: uc, value: 4)
+Entry.create(diagnosis: uc, value: 3)
+Entry.create(diagnosis: uc, value: 5)
+Entry.create(diagnosis: uc, value: 2)
+Entry.create(diagnosis: uc, value: 5)
+Entry.create(diagnosis: uc, value: 7)
+Entry.create(diagnosis: uc, value: 6)
+
+Entry.create(diagnosis: lupus, value: 0)
+Entry.create(diagnosis: lupus, value: 0)
+Entry.create(diagnosis: lupus, value: 3)
+Entry.create(diagnosis: lupus, value: 4)
+Entry.create(diagnosis: lupus, value: 5)
+Entry.create(diagnosis: lupus, value: 8)
+Entry.create(diagnosis: lupus, value: 0)
+Entry.create(diagnosis: lupus, value: 1)
+Entry.create(diagnosis: lupus, value: 2)
+
+Entry.create(diagnosis: scapula, value: 8)
+Entry.create(diagnosis: scapula, value: 6)
+Entry.create(diagnosis: scapula, value: 7)
+Entry.create(diagnosis: scapula, value: 8)
+Entry.create(diagnosis: scapula, value: 9)
+Entry.create(diagnosis: scapula, value: 8)
+Entry.create(diagnosis: scapula, value: 6)
+Entry.create(diagnosis: scapula, value: 7)
+Entry.create(diagnosis: scapula, value: 5)
